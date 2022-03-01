@@ -1,0 +1,49 @@
+.link {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: inline-flex;
+    align-items: center;
+    align-content: center;
+    margin-top: 15px;
+    font-weight: var(--font-bold);
+    color: var(--color-yellow);
+    text-decoration: none;
+    background-color: var(--color-violet);
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    padding-left: 35px;
+    border-radius: 5px;
+}
+.link::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 12px;
+    border-top: 4px solid;
+    border-right: 4px solid;
+    border-color: currentColor;
+    transform: rotate(225deg);
+    display: block;
+    width: 15px;
+    height: 15px;
+}
+.link:hover {
+    animation: changeColor 1.5s 0s infinite;
+}
+
+@keyframes changeColor {
+    0% {
+        background-color: var(--color-violet);
+        color: var(--color-yellow);
+    }
+    50% {
+        background-color: var(--color-light-violet);
+        color: var(--color-light-yellow);
+    }
+    100% {
+        background-color: var(--color-violet);
+        color: var(--color-yellow);
+    }
+}
