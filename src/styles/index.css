@@ -1,0 +1,105 @@
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-dark-gray: #10100e;
+  --color-yellow: #ffff00;
+  --color-light-yellow: #ffffe0;
+  --color-green-yellow: #adff2f;
+  --color-blue: #6a83fb;
+  --color-medium-blue: #0000cd;
+  --color-violet: #ae72c2;
+  --color-light-violet: #ee82ee;
+  --color-red: #f75d83;
+  --color-red-transparent: rgb(197 101 125 / 25%);
+
+  --spaing-ultrasmall: 5px;
+  --spaing-small: 10px;
+  --spaing-medium: 20px;
+  --spaing-large: 30px;
+  --spaing-ultra-large: 70px;
+
+  --transition: 0.5s;
+
+  --font-family-main: sans-serif;
+
+  --font-size-main: 16px;
+  --font-size-subheader: 20px;
+  --font-size-header: 28px;
+
+  --font-bold: 600;
+
+  --border-radius-smoll: 3px;
+  --border-radius-medium: 5px;
+
+  --text-shadow-yellow: 
+    0 0 2px var(--color-white),
+    0 0 40px var(--color-yellow);
+
+  --text-shadow-blue: 
+    0 0 2px var(--color-white),
+    0 0 40px var(--color-blue);
+
+  --margin-list: 7px;
+  
+  --width-max: 1200px;
+
+  /*THEMES*/
+  --theme-light-header: var(--color-yellow);
+  --theme-dark-header: var(--color-medium-blue);
+  --theme-default-header: var(--theme-dark-header);
+
+
+  --theme-light-bgimg: linear-gradient(90deg, rgb(213 213 213) 50%, #88f78d 100%);
+  --theme-dark-bgimg: url('../static/rick-bg.jpg');
+  --theme-default-bgimg: url('../static/rick-bg.jpg');
+
+}
+
+body {
+  font-family: sans-serif;
+  font-size: var(--font-size-main);
+  margin: 0;
+  padding: 0;
+  background: var(--theme-default-bgimg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-attachment: fixed;
+}
+
+img {
+  display: block;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+.header__text {
+  line-height: 1.5;
+  font-size: var(--font-size-header);
+  text-shadow: var(--text-shadow-blue);
+  color: var(--theme-default-header);
+  transition: color var(--transition);
+}
+
+/*SCROLL*/
+* {
+  scrollbar-color: rgb(37, 56, 97) rgba(0, 0, 0, 0.7);
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(224 233 255);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+::-webkit-scrollbar-corner {
+  background-color: rgba(0, 0, 0, 0.7);
+}
